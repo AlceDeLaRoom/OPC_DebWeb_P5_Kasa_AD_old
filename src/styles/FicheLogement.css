@@ -1,0 +1,4 @@
+.fiche-info{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,8 @@
+footer{
+    background-color: black;
+    height: 210px;
+}
+
+Footer *{
+    color: white;
+}
