@@ -1,7 +1,8 @@
 import '../styles/Home.css'
-import FicheApercu from '../Components/FicheApercu';
+import FicheApercu from '../components/FicheApercu';
 
 function Home() {
+
   return (
     <main>
       <FicheApercu number="1"/>

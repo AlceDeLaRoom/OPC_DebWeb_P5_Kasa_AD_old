@@ -1,16 +1,17 @@
 import '../styles/About.css'
-import FicheInfo from '../Components/FicheInfo';
+import FicheInfo from '../components/FicheInfo'
+import aboutInfo from "../datas/aboutInfo"
+import pagePicture from "../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg"
 
 function About() {
-  return (
-    <main>
-        <img src='' alt="image d'une vallée"/>
-        <FicheInfo title="Fiabilité"/>
-        <FicheInfo title="Respect"/>
-        <FicheInfo title="Service"/>
-        <FicheInfo title="Sécurité"/>
-    </main>
-  );
+    return (
+        <main>
+            <img src={pagePicture} alt="image d'une vallée"/>
+            {aboutInfo.map((elem)=>(
+        <FicheInfo title={elem.title} content={elem.content}/>
+    ))}
+        </main>
+    );
 }
 
 export default About;

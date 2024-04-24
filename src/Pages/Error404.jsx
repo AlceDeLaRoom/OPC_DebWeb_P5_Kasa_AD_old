@@ -1,6 +1,6 @@
-import '../styles/Lost.css'
+import '../styles/Error404.css'
 
-function Lost() {
+function Error404() {
   return (
     <main>
         <h1>404</h1>
@@ -9,4 +9,4 @@ function Lost() {
   );
 }
 
-export default Lost;
+export default Error404;
