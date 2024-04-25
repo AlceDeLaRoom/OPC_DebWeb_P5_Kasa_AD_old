@@ -1,13 +1,19 @@
 import '../styles/Home.css'
-import FicheApercu from '../components/FicheApercu';
+import FicheApercu from '../components/FicheApercu'
+import pagePicture from "../assets/Image source 1.jpg"
 
-function Home() {
+
+function Home({logements}) {
 
   return (
     <main>
-      <FicheApercu number="1"/>
-      <FicheApercu number="2"/>
-      <FicheApercu number="3"/>
+      <div>
+        <img src={pagePicture} alt="plage rocailleuse"/>
+        <p>Chez vous, partout et ailleurs</p>
+      </div>
+      {logements.map((elem)=>(
+        <FicheApercu logement={elem}/>
+      ))}
     </main>   
   )
 }

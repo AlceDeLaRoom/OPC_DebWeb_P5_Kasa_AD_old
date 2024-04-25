@@ -1,12 +1,15 @@
 import "../styles/FicheApercu.css"
 import { Link } from 'react-router-dom'
 
-function FicheApercu({number}) {
-    const link = "/Fiche-logement/"+number
+function FicheApercu({logement}) {
+    const link = "/Fiche-logement/"+logement.id
  
     return (
         <div className="fiche">
-            <Link to={link} >Lien du logement {number}</Link>
+            <Link to={link} >
+                <img src={logement.cover} alt={logement.title}/>
+                <p>{logement.title}</p>
+            </Link>
         </div>
     )
   }

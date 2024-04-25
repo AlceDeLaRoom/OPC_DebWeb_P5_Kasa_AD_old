@@ -9,6 +9,8 @@ import About from './pages/About'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
+import logements from "./datas/logements.json"
+
 
 
 const root = createRoot(document.getElementById('root'))
@@ -18,8 +20,8 @@ root.render(
         <Router>
             <Header />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/fiche-logement/:number" element={<FicheLogement />} />
+                <Route path="/" element={<Home logements={logements}/>} />
+                <Route path="/fiche-logement/:id" element={<FicheLogement logements={logements}/>} />
                 <Route path="/a-propos" element={<About />} />
                 <Route path="*" element={<Error404 />} />
             </Routes>

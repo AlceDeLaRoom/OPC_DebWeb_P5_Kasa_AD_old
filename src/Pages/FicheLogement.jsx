@@ -1,21 +1,36 @@
 import '../styles/FicheLogement.css'
 import { useParams } from 'react-router-dom'
 import FicheInfo from '../components/FicheInfo'
+import Carrousel from '../components/Carrousel'
+import Tags from '../components/Tags'
+import Notes from '../components/Notes'
+import Error404 from '../pages/Error404'
 
 
-function FicheLogement() {
-    const {logementNumber} = useParams()
-    const { number} = useParams()
+function FicheLogement({logements}) {
+    const {id} = useParams()
 
-    console.log(number)
-
+    const logement = logements.find((elem)=>elem.id==id)
+    if (!logement){
+        return <Error404 />
+    }
+    const equipements = logement.equipments.join(', ')
 
     return (
         <main>
-            <h1>Appartements: {logementNumber}</h1>
-            <div className='fiche-info'>
-            <FicheInfo title="Description"/>
-            <FicheInfo title="Equipements"/>
+            
+            <Carrousel pictures={logement.pictures}/>
+            <h1>{logement.title}</h1>
+            <p>{logement.location}</p>
+            <div>
+                <p>{logement.host.name}</p>
+                <img src={logement.host.picture}/>
+            </div>
+            <Tags logement={logement}/>
+            <Notes  logement={logement}/>
+            <div>
+                <FicheInfo title="Description" content={logement.description}/>
+                <FicheInfo title="Equipements" content={equipements}/>
             </div>
         </main>
     )
