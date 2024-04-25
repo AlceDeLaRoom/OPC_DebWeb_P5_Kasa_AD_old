@@ -1,4 +1,3 @@
-import "../styles/FicheApercu.css"
 import { Link } from 'react-router-dom'
 
 function FicheApercu({logement}) {

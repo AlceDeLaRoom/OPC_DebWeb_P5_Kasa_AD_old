@@ -1,4 +1,3 @@
-import '../styles/About.css'
 import FicheInfo from '../components/FicheInfo'
 import aboutInfo from "../datas/aboutInfo"
 import pagePicture from "../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg"

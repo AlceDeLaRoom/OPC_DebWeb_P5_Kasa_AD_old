@@ -1,4 +1,3 @@
-import '../styles/Footer.css'
 import logo from "../assets/footer_logo.png"
 
 

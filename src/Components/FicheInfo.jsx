@@ -1,4 +1,3 @@
-import "../styles/FicheInfo.css"
 import arrowDown from "../assets/Arrow_down.png"
 import arrowUp from "../assets/Arrow_up.png"
 import { useState } from "react"

@@ -1,5 +1,3 @@
-import '../styles/Error404.css'
-
 function Error404() {
   return (
     <main>

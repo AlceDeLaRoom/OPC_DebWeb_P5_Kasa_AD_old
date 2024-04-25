@@ -1,4 +1,3 @@
-import '../styles/Header.css'
 import logo from "../assets/banner_logo_desktop.png"
 import { Link } from 'react-router-dom'
 
