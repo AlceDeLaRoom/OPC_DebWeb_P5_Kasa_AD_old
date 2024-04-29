@@ -1,0 +1,42 @@
+.ficheInfo{
+    margin: 28px 0;
+    &__title{
+        padding: 0 10px;
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-primary;
+        border-radius: 10px;
+        font-weight: 700;
+        color: white;
+        p{
+            margin: 0;
+        }
+        img{
+            margin-left: 3px;
+            height: 14px;
+            width: 24px;
+            cursor: pointer;
+        }
+    }
+    &__content{
+        font-weight: 400;
+        padding: 0 10px;
+    }
+}
+
+.ficheLogement .ficheInfo{
+    width: 562px;
+}
+
+.about .ficheInfo{
+    &__title{
+        font-size: 24px;
+        border-radius: 5px;
+        padding: 0 15px;
+    }
+    &__content{
+        padding: 0 15px;
+    }
+}

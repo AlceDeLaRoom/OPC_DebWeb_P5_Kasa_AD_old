@@ -1,0 +1,16 @@
+header{
+    width: 1240px ;
+    margin: 50px auto;
+    padding: 0 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    nav a{
+        font-size: 24px;
+        margin-left: 60px;
+    }
+    .active{
+        text-decoration: underline;
+        pointer-events: none;
+    }
+}

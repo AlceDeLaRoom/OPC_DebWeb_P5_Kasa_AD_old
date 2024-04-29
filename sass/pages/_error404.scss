@@ -1,0 +1,19 @@
+.error404{
+    height: 700px;
+    color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    h1{
+        font-size: 288px;
+        font-weight: 700;
+        margin: 0;
+    }
+    p{
+        font-size: 38px;
+    }
+    a{
+        text-decoration-line: underline;
+    }
+}

@@ -1,9 +1,9 @@
 function Tags({logement}){
 
     return(
-        <div>
+        <div className="tags">
             {logement.tags.map((e, index)=>(
-                <p key={`${e}${index}`}>{e}</p>
+                <p className="tags__element" key={`${e}${index}`}>{e}</p>
             ))}
         </div>
     )

@@ -1,0 +1,43 @@
+
+.ficheLogement{
+    .banner{
+        p{
+            margin: 0;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__title{
+            h1{
+                font-size: 36px;
+                color: $color-primary;
+                margin: 0;
+            }
+        }
+        &__host{
+            display: flex;
+            align-items: center;
+            text-align: right;
+            color: $color-primary;
+            &__picture{
+                height: 64px;
+                width: 64px;
+                border-radius: 32px;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .tagsAndRatings{
+        margin-left: -10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .infoLogement{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+

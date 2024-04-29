@@ -12,15 +12,18 @@ function FicheInfo({title, content}) {
     const [open, setOpen] = useState(false)
 
     return (
-      <div className="title-info">
-        <h2>{title}</h2>
-        <img src={open? arrowDown : arrowUp} onClick={handleClick} alt="flèche pour afficher ou cacher les infos"/>
+      <div className="ficheInfo">
+        <div className="ficheInfo__title">
+          <p>{title}</p>
+          <img src={open? arrowDown : arrowUp} onClick={handleClick} alt="flèche pour afficher ou cacher les infos"/>
+        </div>
         {open && (
-            <div>
-                <p>{content}</p>
-            </div>
+          <div className="ficheInfo__content">
+              <p>{content}</p>
+          </div>
         )}
       </div>
+
     )
   }
   

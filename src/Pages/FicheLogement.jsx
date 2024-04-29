@@ -16,18 +16,24 @@ function FicheLogement({logements}) {
     const equipements = logement.equipments.join(', ')
 
     return (
-        <main>
+        <main className='ficheLogement'>
             
             <Carrousel pictures={logement.pictures}/>
-            <h1>{logement.title}</h1>
-            <p>{logement.location}</p>
-            <div>
-                <p>{logement.host.name}</p>
-                <img src={logement.host.picture}/>
+            <div className='banner'>
+                <div className='banner__title'>
+                    <h1>{logement.title}</h1>
+                    <p>{logement.location}</p>
+                </div>
+                <div className='banner__host'>
+                    <p>{logement.host.name}</p>
+                    <img className='banner__host__picture' src={logement.host.picture}/>
+                </div>
             </div>
-            <Tags logement={logement}/>
-            <Rating  logement={logement}/>
-            <div>
+            <div className="tagsAndRatings">
+                <Tags logement={logement}/>
+                <Rating  logement={logement}/>
+            </div>
+            <div className='infoLogement'>
                 <FicheInfo title="Description" content={logement.description}/>
                 <FicheInfo title="Equipements" content={equipements}/>
             </div>

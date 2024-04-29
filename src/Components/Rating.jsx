@@ -7,7 +7,7 @@ function Rating({logement}){
     const inactiveStarImg = (e) => <img src={inactiveStar} key={`star${e}`} alt='étoile grise' />
 
     return(
-        <div>
+        <div className='rating'>
             {rangeRating.map((elem)=>elem>logement.rating?inactiveStarImg(elem):activeStarImg(elem))}
         </div>
     )
