@@ -1,9 +1,10 @@
 .ficheApercu{
-    height: 340px;
-    width: 340px;
+    width: 100%;
+    aspect-ratio: 1;
     border-radius: 10px;
     position: relative;
     z-index: 1;
+    
     img{
         position: absolute;
         height: 100%;

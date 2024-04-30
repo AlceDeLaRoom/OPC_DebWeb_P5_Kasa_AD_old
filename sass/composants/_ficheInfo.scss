@@ -10,6 +10,7 @@
         border-radius: 10px;
         font-weight: 700;
         color: white;
+        cursor: pointer;
         p{
             margin: 0;
         }
@@ -17,17 +18,20 @@
             margin-left: 3px;
             height: 14px;
             width: 24px;
-            cursor: pointer;
         }
     }
     &__content{
         font-weight: 400;
         padding: 0 10px;
     }
-}
-
-.ficheLogement .ficheInfo{
-    width: 562px;
+    @media (max-width: $mobile) {
+        margin: 10px 0;
+        &__title{
+            height: 32px;
+            font-size: 13px;
+        }
+        
+    }
 }
 
 .about .ficheInfo{

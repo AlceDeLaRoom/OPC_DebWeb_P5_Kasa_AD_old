@@ -15,25 +15,29 @@ function FicheLogement({logements}) {
     }
     const equipements = logement.equipments.join(', ')
 
+    const hostName = logement.host.name
+    console.log(hostName)
+
     return (
         <main className='ficheLogement'>
-            
             <Carrousel pictures={logement.pictures}/>
-            <div className='banner'>
-                <div className='banner__title'>
-                    <h1>{logement.title}</h1>
-                    <p>{logement.location}</p>
+            <div className='mainInfo'>
+                <div className='mainInfo__description'>
+                    <div className='mainInfo__title'>
+                        <h1>{logement.title}</h1>
+                        <p>{logement.location}</p>
+                    </div>
+                    <Tags logement={logement}/>
                 </div>
-                <div className='banner__host'>
-                    <p>{logement.host.name}</p>
-                    <img className='banner__host__picture' src={logement.host.picture}/>
+                <div className="mainInfo__hostAndRating">
+                    <div className='mainInfo__host'>
+                        <p>{hostName}</p>
+                        <img className='mainInfo__host--picture' src={logement.host.picture}/>
+                    </div>
+                    <Rating  logement={logement}/>
                 </div>
             </div>
-            <div className="tagsAndRatings">
-                <Tags logement={logement}/>
-                <Rating  logement={logement}/>
-            </div>
-            <div className='infoLogement'>
+            <div className='ficheLogement__infoLogement'>
                 <FicheInfo title="Description" content={logement.description}/>
                 <FicheInfo title="Equipements" content={equipements}/>
             </div>

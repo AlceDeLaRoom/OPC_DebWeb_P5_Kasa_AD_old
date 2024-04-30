@@ -1,43 +1,69 @@
 
 .ficheLogement{
-    .banner{
-        p{
-            margin: 0;
-        }
+    .mainInfo{
+        min-height: 120px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        &__description{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
         &__title{
             h1{
                 font-size: 36px;
                 color: $color-primary;
                 margin: 0;
             }
+            p{
+                margin: 0;
+            }
+        }
+        &__hostAndRating{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
         }
         &__host{
             display: flex;
+            justify-content: flex-end;
             align-items: center;
             text-align: right;
             color: $color-primary;
-            &__picture{
+            &--picture{
                 height: 64px;
                 width: 64px;
                 border-radius: 32px;
                 margin-left: 10px;
+            }  
+        }
+        @media(max-width: $mobile){
+            flex-direction: column;
+            &__hostAndRating{
+                margin-top: 30px;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__title{
+                h1{
+                    font-size: 18px;
+                }
+                p{
+                    font-size: 14px;
+                }
             }
         }
     }
-
-    .tagsAndRatings{
-        margin-left: -10px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .infoLogement{
-        display: flex;
-        justify-content: space-between;
-    }
-
+    &__infoLogement{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10%;
+        width: 100%;
+        @media (max-width: $mobile){
+            grid-template-columns: 1fr;
+        }
+    }  
 }
 

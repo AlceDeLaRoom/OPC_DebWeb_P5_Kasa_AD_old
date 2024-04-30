@@ -1,16 +1,29 @@
 header{
-    width: 1240px ;
-    margin: 50px auto;
-    padding: 0 100px;
+    max-width: 1240px ;
+    min-width: 325px ;
+    height: 12svh;
+    width: 90%;
+    margin: auto;
+    padding: 0 5%;
     display:flex;
     justify-content: space-between;
     align-items: center;
     nav a{
         font-size: 24px;
-        margin-left: 60px;
+        margin-left: 40px;
+        text-transform: uppercase;
     }
     .active{
         text-decoration: underline;
         pointer-events: none;
+    }
+    @media(max-width: $mobile){
+        img{
+            height: 52px;
+        }
+        nav a{
+            font-size: 12px;
+            margin-left: 20px;
+        }
     }
 }

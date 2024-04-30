@@ -9,7 +9,7 @@ function Home({logements}) {
       <div className='home__banner'>
         <img src={pagePicture} alt="plage rocailleuse"/>
         <div className='home__banner--mask'>
-          <p>Chez vous, partout et ailleurs</p>
+          <p>Chez vous,<br/> partout et ailleurs</p>
         </div>
       </div>
       <div className='home__gallery'>

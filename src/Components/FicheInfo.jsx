@@ -13,9 +13,9 @@ function FicheInfo({title, content}) {
 
     return (
       <div className="ficheInfo">
-        <div className="ficheInfo__title">
+        <div className="ficheInfo__title" onClick={handleClick}>
           <p>{title}</p>
-          <img src={open? arrowDown : arrowUp} onClick={handleClick} alt="flèche pour afficher ou cacher les infos"/>
+          <img src={open? arrowDown : arrowUp} alt="flèche pour afficher ou cacher les infos"/>
         </div>
         {open && (
           <div className="ficheInfo__content">
