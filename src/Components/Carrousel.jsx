@@ -18,6 +18,6 @@ function Carrousel({pictures}){
             {nav && navPicture}
         </div>
     )
-}
+};
 
 export default Carrousel
