@@ -18,11 +18,25 @@
             margin-left: 3px;
             height: 14px;
             width: 24px;
+            transition: transform 250ms linear;
         }
     }
     &__content{
+        position: relative;
+        max-height: 0;
+        z-index: -1;
         font-weight: 400;
         padding: 0 10px;
+        opacity: 0;
+        transform: translateY(-100px);
+        overflow: hidden;
+        transition: all 400ms linear;
+        &.open{
+            height: auto;
+            max-height: 200px;
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
     @media (max-width: $mobile) {
         margin: 10px 0;

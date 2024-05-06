@@ -25,14 +25,11 @@
             font-weight: 700;
             font-size: 48px;
             color: white;
-            br{
-                display: none;
-            }
             @media(max-width: 906px){
                 top: 2%;
                 justify-content: flex-start;
-                br{
-                    display: inline;
+                p {
+                    width: 90%;
                 }
             }
         }
@@ -55,7 +52,7 @@
         grid-row-gap: 30px;
         grid-column-gap: 5%;
         padding: 50px 5%;
-        @media(max-width: 1425px){
+        @media(max-width: 900px){
             grid-template-columns: 1fr 1fr;
         }        
         @media(max-width: $mobile){

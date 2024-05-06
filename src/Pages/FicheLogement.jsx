@@ -3,20 +3,28 @@ import FicheInfo from '../components/FicheInfo'
 import Carrousel from '../components/Carrousel'
 import Tags from '../components/Tags'
 import Rating from '../components/Rating'
-import Error404 from '../pages/Error404'
+import Error404 from './Error404'
 
 
 function FicheLogement({logements}) {
     const {id} = useParams()
 
-    const logement = logements.find((elem)=>elem.id==id)
+    const logement = logements.find((elem)=>elem.id===id)
     if (!logement){
         return <Error404 />
     }
-    const equipements = logement.equipments.join(', ')
 
     const hostName = logement.host.name
-    console.log(hostName)
+
+    const description = [
+        "Description",
+        logement.description
+    ]
+
+    const equipement = [
+        "Equipements",
+        logement.equipments
+    ]
 
     return (
         <main className='ficheLogement'>
@@ -31,15 +39,15 @@ function FicheLogement({logements}) {
                 </div>
                 <div className="mainInfo__hostAndRating">
                     <div className='mainInfo__host'>
-                        <p>{hostName}</p>
-                        <img className='mainInfo__host--picture' src={logement.host.picture}/>
+                        <p className='mainInfo__host--title' >{hostName}</p>
+                        <img className='mainInfo__host--picture' src={logement.host.picture} alt={"Votre hôte: "+ hostName}/>
                     </div>
                     <Rating  logement={logement}/>
                 </div>
             </div>
             <div className='ficheLogement__infoLogement'>
-                <FicheInfo title="Description" content={logement.description}/>
-                <FicheInfo title="Equipements" content={equipements}/>
+                <FicheInfo content={description}/>
+                <FicheInfo content={equipement} list={true} />
             </div>
         </main>
     )

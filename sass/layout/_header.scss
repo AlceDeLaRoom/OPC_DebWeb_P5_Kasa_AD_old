@@ -1,7 +1,7 @@
 header{
     max-width: 1240px ;
     min-width: 325px ;
-    height: 12svh;
+    height: 180px;
     width: 90%;
     margin: auto;
     padding: 0 5%;
@@ -11,19 +11,20 @@ header{
     nav a{
         font-size: 24px;
         margin-left: 40px;
-        text-transform: uppercase;
     }
     .active{
         text-decoration: underline;
         pointer-events: none;
     }
     @media(max-width: $mobile){
+        max-width: 420px;
         img{
             height: 52px;
         }
         nav a{
             font-size: 12px;
             margin-left: 20px;
+            text-transform: uppercase;
         }
     }
 }

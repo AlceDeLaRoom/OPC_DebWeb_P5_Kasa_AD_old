@@ -12,6 +12,6 @@ function FicheApercu({logement}) {
             </Link>
         </div>
     )
-  }
-  
-  export default FicheApercu
+}
+
+export default FicheApercu

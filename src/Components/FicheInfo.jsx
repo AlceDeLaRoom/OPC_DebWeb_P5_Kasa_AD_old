@@ -1,30 +1,43 @@
-import arrowDown from "../assets/Arrow_down.png"
 import arrowUp from "../assets/Arrow_up.png"
 import { useState } from "react"
 
-function FicheInfo({title, content}) {
+function FicheInfo({content, list = false}) {
+
+    const [title, description] = content
+    function layout (){
+        if (list){
+            return(
+                <ul>
+                    {description.map((elem)=>(<li>{elem}</li>))}
+                </ul>
+            )
+        }
+        return (
+            <p>{description}</p>
+        )
+    }
 
     function handleClick() {
-        console.log(open)
         open? setOpen(false) : setOpen(true);
     }
 
     const [open, setOpen] = useState(false)
 
-    return (
-      <div className="ficheInfo">
-        <div className="ficheInfo__title" onClick={handleClick}>
-          <p>{title}</p>
-          <img src={open? arrowDown : arrowUp} alt="flèche pour afficher ou cacher les infos"/>
-        </div>
-        {open && (
-          <div className="ficheInfo__content">
-              <p>{content}</p>
-          </div>
-        )}
-      </div>
+    const classContent = "ficheInfo__content" + (open ? " open": '')
 
+    return (
+        <div className="ficheInfo">
+            <div className="ficheInfo__title" onClick={handleClick}>
+                <p>{title}</p>
+                <img src={arrowUp} alt="flèche pour afficher ou cacher les infos"
+                style={{transform: open ? 'rotate(-180deg)' : 'rotate(0deg)'}}
+                />
+            </div>
+                <div className={classContent}>
+                    {layout()}
+                </div>
+        </div>
     )
-  }
+}
   
-  export default FicheInfo
+export default FicheInfo
